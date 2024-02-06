@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  margin-bottom: 40px;
+  font-family: 'Honk', system-ui;
+  font-size: 80px;
+}
+.container ul {
+  margin-bottom: 40px;
+  font-family: 'Single Day', cursive;
+  font-size: 30px;
+}
+.images,
+.input {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+img {
+  height: 100px;
+}
+
+input {
+  height: 70px;
+  width: 70px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-images {
+  display: flex;
+  flex-direction: column;
+}

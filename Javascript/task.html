@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .icon {
+        font-size: 40px;
+        border: 1px solid black;
+        padding: 0 10px;
+        
+      } */
+      img {
+        height: 50px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Enter a Number</label>
+    <input type="number" min="0" id="input" />
+    <select onchange="createOperator(this.value)">
+      <option disabled selected>Select Operation</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="%">%</option>
+    </select>
+    <div id="show-operators"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
