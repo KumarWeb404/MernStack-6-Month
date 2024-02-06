@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div2">
+      <h2>GST Calculator</h2>
+      <label>Amount:-</label>
+      <input type="number" id="amount" />
+      <button id="calculate" onclick="calcGST()">Calculate</button>
+
+      <h4><u>Output</u></h4>
+      <p>Amount Entered is : <span id="amount-out"></span></p>
+      <p>GST is : <span id="gst-out"></span></p>
+      <p>Total is : <span id="total"></span></p>
+    </div>
+    <script>
+      const userAmount = document.getElementById('amount');
+      const displayAmount = document.getElementById('amount-out');
+      const displayGST = document.getElementById('gst-out');
+      const displayTotal = document.getElementById('total');
+
+      function calcGST() {
+        let gst = (Number(userAmount.value) / 100) * 18;
+        let total = Number(userAmount.value) + gst;
+        displayAmount.innerText = userAmount.value;
+        displayGST.innerText = gst;
+        displayTotal.innerText = total;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Height</label>
+    <input type="text" id="height" />
+    <br />
+    <label>Width</label>
+    <input type="text" id="width" />
+    <br />
+    <label>Color</label>
+    <input type="text" id="color" />
+    <br />
+    <label>Text</label>
+    <input type="text" id="text" />
+    <br />
+    <label>Background-Color</label>
+    <input type="text" id="bg-color" />
+    <br />
+    <button onclick="createDiv()">Create</button>
+
+    <div id="output"></div>
+
+    <script>
+      const height = document.getElementById('height');
+      const width = document.getElementById('width');
+      const text = document.getElementById('text');
+      const color = document.getElementById('color');
+      const bgColor = document.getElementById('bg-color');
+      const customDiv = document.getElementById('output');
+
+      function createDiv() {
+        customDiv.innerText = text.value;
+        customDiv.style.color = color.value;
+        customDiv.style.width = width.value;
+        customDiv.style.height = height.value;
+        customDiv.style.backgroundColor = bgColor.value;
+      }
+    </script>
+  </body>
+</html>

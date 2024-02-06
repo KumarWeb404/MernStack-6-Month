@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      img {
+        position: absolute;
+      }
+      .car {
+        position: relative;
+        animation: move 5s infinite;
+      }
+      .car-body {
+        height: 400px;
+      }
+      .wheel {
+        height: 80px;
+        top: 190px;
+        animation: rotate 5s infinite ease;
+      }
+      .wheel-1 {
+        left: 74px;
+      }
+      .wheel-2 {
+        left: 377px;
+      }
+      @keyframes move {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(600px);
+        }
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(1080deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="car">
+      <img class="car-body" src="car.png" alt="" />
+      <img class="wheel wheel-1" src="wheel.png" alt="" />
+      <img class="wheel wheel-2" src="wheel.png" alt="" />
+    </div>
+  </body>
+</html>

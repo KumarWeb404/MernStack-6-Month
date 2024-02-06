@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body id="result">
+    <input type="button" value="Enter number" onclick="generate()" />
+    <input type="text" id="number" />
+
+    <script>
+      function generate() {
+        var a = parseInt(document.getElementById('number').value);
+        var ch = document.getElementById('result');
+        for (i = 1; i <= a; i++) {
+          var div = document.createElement('div');
+
+          // div.setAttribute('id', 'div');
+          div.setAttribute('id', 'div' + i);
+          ch.appendChild(div);
+          div = document.getElementById('div' + i);
+          // var div = document.getElementById('div');
+          // div.innerHTML+=""
+          if (a % 2 == 0) {
+            console.log(a);
+            div.style.backgroundColor = 'red';
+          } else {
+            div.style.backgroundColor = 'yellow';
+          }
+          div.style.height = '100px';
+          div.style.width = '100px';
+          div.style.marginBottom = '20px';
+          // div.innerHTML+=""
+        }
+      }
+    </script>
+  </body>
+</html>

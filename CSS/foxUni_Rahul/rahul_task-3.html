@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .result-div {
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <label>Enter Number</label>
+    <input type="text" id="input" />
+    <br />
+    <button onclick="showDiv()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+      function showDiv() {
+        const body = document.getElementById('body');
+        const input = Number(document.getElementById('input').value);
+        const result = document.getElementById('result');
+        let divColor;
+        result.innerHTML = '';
+
+        if (input % 2 === 0) {
+          divColor = 'red';
+        } else {
+          divColor = 'yellow';
+        }
+
+        for (let i = 1; i <= input; i++) {
+          console.log(i);
+          result.innerHTML += `<div class='result-div ${divColor}'></div>`;
+        }
+      }
+    </script>
+  </body>
+</html>

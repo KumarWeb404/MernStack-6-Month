@@ -1,0 +1,20 @@
+.image__hovered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.image__hovered img {
+  height: 300px;
+  border: 3px solid grey;
+}
+
+.image__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.image__list img {
+  height: 150px;
+  border: 3px solid grey;
+}

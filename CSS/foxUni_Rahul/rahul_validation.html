@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #emailError,
+      #passwordError {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="submit.html" onsubmit="return validate()">
+      <label>Email</label>
+      <input type="text" id="email" onblur="checkEmail()" />
+      <span id="emailError"></span>
+      <br />
+      <label>Password</label>
+      <input type="text" id="password" onblur="checkPassword()" />
+      <span id="passwordError"></span>
+      <br />
+      <button>Submit</button>
+    </form>
+
+    <script>
+      const emailError = document.getElementById('emailError');
+      const passwordError = document.getElementById('passwordError');
+
+      //Patterns
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+      const passwordPattern =
+        /^(?=.*[!@#$%^&*()-_+=])(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9!@#$%^&*()-_+=]{8,15}$/;
+
+      function checkEmail() {
+        const email = document.getElementById('email').value;
+
+        // !emailPattern.test(email)
+        //   ? (emailError.innerText = 'Enter valid Email!')
+        //   : (emailError.innerText = '');
+
+        if (!emailPattern.test(email)) {
+          emailError.innerText = 'Enter valid Email!';
+          return false;
+        }
+
+        emailError.innerText = '';
+        return true;
+      }
+
+      function checkPassword() {
+        const password = document.getElementById('password').value;
+
+        if (!passwordPattern.test(password)) {
+          passwordError.innerText = 'Enter valid Password!';
+          return false;
+        }
+
+        passwordError.innerHTML = '';
+        return true;
+      }
+
+      function validate() {
+        checkEmail();
+        checkPassword();
+        return checkEmail() && checkPassword();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunny</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        background: repeating-linear-gradient(to bottom, white, purple 20%);
+        height: 1000px;
+      }
+      .bunny {
+        position: relative;
+        width: 400px;
+        height: 600px;
+        top: 2%;
+        left: 40%;
+      }
+      .ear {
+        height: 150px;
+        width: 100px;
+        background-color: pink;
+        float: left;
+        border: 10px solid white;
+        position: absolute;
+      }
+      .ear-1 {
+        border-bottom-left-radius: 90%;
+        border-top-right-radius: 90%;
+      }
+      .ear-2 {
+        border-top-left-radius: 90%;
+        border-bottom-right-radius: 90%;
+        left: 130px;
+      }
+      .face {
+        height: 300px;
+        width: 300px;
+        border: 5px solid pink;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+        top: 170px;
+        position: absolute;
+        background-color: white;
+      }
+      .eye {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        border: 1px solid black;
+        position: absolute;
+      }
+      .eye-1 {
+        top: 40px;
+        left: 50px;
+      }
+      .eye-2 {
+        top: 40px;
+        right: 50px;
+      }
+      .pupil {
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        border-radius: 50%;
+        position: inherit;
+        top: 10px;
+        left: 5px;
+      }
+      .nose {
+        height: 50px;
+        width: 50px;
+        border: 5px solid black;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        position: absolute;
+        left: 117px;
+        bottom: 110px;
+      }
+      .mouth {
+        height: 50px;
+        width: 150px;
+        background-color: red;
+        border: 1px solid black;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        bottom: 20px;
+        left: 75px;
+      }
+      .leg {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: pink;
+        bottom: 40px;
+        border: 10px solid white;
+        border-top-right-radius: 30%;
+        border-top-left-radius: 30%;
+      }
+      .leg-1 {
+        left: 50px;
+      }
+      .leg-2 {
+        left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bunny">
+      <div class="ear ear-1"></div>
+      <div class="ear ear-2"></div>
+      <div class="face">
+        <div class="eye eye-1">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye eye-2">
+          <div class="pupil"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="leg leg-1"></div>
+      <div class="leg leg-2"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="hour">00</span>: <span id="minute">00</span>:
+      <span id="second">00</span>
+      <button id="start" onclick="start()">Start</button>
+      <button id="stop" onclick="stop()">Stop</button>
+      <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    <script>
+      const hour = document.getElementById('hour');
+      const minute = document.getElementById('minute');
+      const second = document.getElementById('second');
+      const startButton = document.getElementById('start');
+      const stopButton = document.getElementById('stop');
+      const resetButton = document.getElementById('reset');
+
+      let interval;
+      let number = 0;
+      let minutes = 0;
+      let hours = 0;
+      const resetVal = '00';
+
+      stopButton.style.display = 'none';
+      resetButton.style.display = 'none';
+
+      //hour:minute:second
+
+      //start
+      function start() {
+        interval = setInterval(callSecond, 1000);
+        startButton.style.display = 'none';
+        stopButton.style.display = 'inline';
+        resetButton.style.display = 'inline';
+      }
+
+      //stop
+      function stop() {
+        clearInterval(interval);
+        startButton.style.display = 'inline';
+        stopButton.style.display = 'none';
+      }
+
+      //reset
+      function reset() {
+        number = 0;
+        minutes = 0;
+        hours = 0;
+        second.innerText = resetVal;
+        minute.innerText = resetVal;
+        hour.innerText = resetVal;
+      }
+
+      //for counting seconds
+      function callSecond() {
+        number == 59 ? callMinute() : ++number;
+        second.innerText = number < 10 ? '0' + number : number;
+      }
+
+      //for counting minutes
+      function callMinute() {
+        number = 0;
+        minutes == 59 ? callHour() : ++minutes;
+        minute.innerText = minutes < 10 ? '0' + minutes : minutes;
+      }
+
+      //for counting hours
+      function callHour() {
+        minutes = 0;
+        ++hours;
+        hour.innerText = hours < 10 ? '0' + hours : hours;
+      }
+    </script>
+  </body>
+</html>

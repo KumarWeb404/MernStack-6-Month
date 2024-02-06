@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Enter Start</label>
+    <input type="text" id="start" />
+    <br />
+    <label>Enter End</label>
+    <input type="text" id="end" />
+    <br />
+    <label>Enter Number</label>
+    <input type="text" id="number" />
+    <br />
+    <button onclick="showTable()">Submit</button>
+    <div id="result"></div>
+    <script>
+      function showTable() {
+        const start = Number(document.getElementById('start').value);
+        const end = Number(document.getElementById('end').value);
+        const number = Number(document.getElementById('number').value);
+        const result = document.getElementById('result');
+
+        result.innerHTML = '';
+
+        for (let i = start; i <= end; i++) {
+          let product = number * i;
+          result.innerHTML += `<p>${number}*${i}=${product}</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

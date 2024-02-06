@@ -1,0 +1,171 @@
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+  height: 18vh;
+  background-color: white;
+  padding-left: 60px;
+}
+.logo {
+  padding-top: 10px;
+  width: 30%;
+  float: left;
+}
+.logo-heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 38px;
+}
+.logo-para {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  transform: translateY(-15px);
+  text-transform: uppercase;
+}
+.contact {
+  float: left;
+}
+.contact div {
+  float: left;
+  padding: 10px;
+}
+.contact-icon {
+  color: #ff5e00;
+  height: 20px;
+  width: 40px;
+  float: left;
+  transform: translateY(11px);
+}
+.apply {
+  text-align: center;
+  padding: 15px 0;
+}
+.apply-btn {
+  padding: 20px;
+  background-color: #ff5e00;
+  color: white;
+  border: none;
+}
+.contact p {
+  color: gray;
+}
+.navigation {
+  padding-left: 50px;
+  height: 10vh;
+  background-color: #0c1227;
+  position: relative;
+}
+.list {
+  list-style: none;
+}
+.list-item {
+  float: left;
+  padding: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.search {
+  background-color: transparent;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  position: absolute;
+  right: 40px;
+}
+
+.search:focus {
+  color: white;
+}
+.search-icon {
+  color: gray;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 17px;
+  right: 48px;
+}
+.main {
+  position: relative;
+}
+.linear-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff5e00 -5%, transparent);
+}
+.bg-image {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.intro,
+.features {
+  position: absolute;
+  z-index: 10;
+}
+.intro {
+  top: 300px;
+  left: 100px;
+  color: white;
+}
+.intro div {
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #ff5e00;
+  border: 1px solid white;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+}
+.features {
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
+  color: white;
+  text-align: center;
+}
+.feature-1,
+.feature-2,
+.feature-3,
+.feature-4 {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+.feature-1,
+.feature-3 {
+  background-color: #ff5e00;
+}
+.feature-2,
+.feature-4 {
+  background-color: #0c1227;
+}
+.feature-icon {
+  margin-top: 30px;
+  color: white;
+}
+
+.heading-2 {
+  font-size: 16px;
+}
+.para {
+  font-size: 14px;
+  width: 90%;
+  margin: auto;
+}
+
+.feature .heading-2 {
+  margin-bottom: 10px;
+}
+.feature .feature-icon {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star</title>
+    <style>
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        animation: star 4s infinite;
+        position: relative;
+      }
+
+      @keyframes star {
+        0% {
+          top: 0;
+          left: 0;
+          transform: rotate(0deg);
+        }
+        20% {
+          top: 300px;
+          left: 500px;
+        }
+        40% {
+          top: 200px;
+          left: 0;
+        }
+        60% {
+          top: 0;
+          left: 500px;
+        }
+        80% {
+          top: 400px;
+          left: 400px;
+        }
+        100% {
+          top: 0;
+          left: 0;
+          transform: rotate(3600deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="image-rotate" src="face.jpg" alt="face" />
+  </body>
+</html>

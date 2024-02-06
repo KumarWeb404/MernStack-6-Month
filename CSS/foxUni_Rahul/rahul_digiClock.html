@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open sans', sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('India.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 2;
+      }
+      .clock__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+      .clock__container p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Time in India</h1>
+      <div class="clock__container">
+        <p id="details"></p>
+        <p><span id="hours"></span> Hours</p>
+        <p><span id="minutes"></span> Minutes</p>
+        <p><span id="seconds"></span> Seconds</p>
+      </div>
+    </div>
+
+    <script>
+      const dateDetail = document.getElementById('details');
+      const hour = document.getElementById('hours');
+      const minute = document.getElementById('minutes');
+      const second = document.getElementById('seconds');
+
+      setInterval(function setTime() {
+        const date = new Date();
+        dateDetail.innerText = date;
+        hour.innerText = date.getHours();
+        minute.innerText = date.getMinutes();
+        second.innerText = date.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>

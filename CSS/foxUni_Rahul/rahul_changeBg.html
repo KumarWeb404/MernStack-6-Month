@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #bg-1 {
+        background-color: blue;
+      }
+      #bg-2 {
+        background-color: red;
+      }
+      #bg-3 {
+        background-color: lime;
+      }
+      #bg-4 {
+        background-color: pink;
+      }
+      #bg-5 {
+        background-color: yellow;
+      }
+      #bg-6 {
+        background-color: black;
+      }
+      #bg-7 {
+        background-color: orange;
+      }
+      #bg-8 {
+        background-color: goldenrod;
+      }
+      #bg-9 {
+        background-color: blueviolet;
+      }
+      #bg-10 {
+        background-color: maroon;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <input type="text" id="input" onkeypress="changeBg()" />
+
+    <script>
+      const input = document.getElementById('input');
+      const body = document.getElementById('body');
+      function changeBg() {
+        var random = Math.floor(Math.random() * 10) + 1;
+        body.setAttribute('id', `bg-${random}`);
+      }
+    </script>
+  </body>
+</html>

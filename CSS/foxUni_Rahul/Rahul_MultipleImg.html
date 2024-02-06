@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="multipleImg.css" />
+  </head>
+  <body>
+    <div class="image__hovered">
+      <img id="img-main" src="img/gosling.jpg" alt="Thumbs-up" />
+    </div>
+    <div class="image__list">
+      <img
+        id="img-1"
+        src="img/cbale.jpg"
+        alt="Thumbs-up"
+        onmouseover="showImg1()"
+        onmouseout="removeImg1()"
+      />
+      <img
+        id="img-2"
+        src="img/bean.jpg"
+        alt="Thumbs-up"
+        onmouseover="showImg2()"
+        onmouseout="removeImg2()"
+      />
+      <img
+        id="img-3"
+        src="img/terminator.jpg"
+        alt="Thumbs-up"
+        onmouseover="showImg3()"
+        onmouseout="removeImg3()"
+      />
+      <img
+        id="img-4"
+        src="img/very-nice.jpg"
+        alt="Thumbs-up"
+        onmouseover="showImg4()"
+        onmouseout="removeImg4()"
+      />
+    </div>
+    <script>
+      const mainImg = document.getElementById('img-main');
+      const img1 = document.getElementById('img-1');
+      const img2 = document.getElementById('img-2');
+      const img3 = document.getElementById('img-3');
+      const img4 = document.getElementById('img-4');
+
+      function showImg1() {
+        mainImg.src = img1.src;
+      }
+      function removeImg1() {
+        mainImg.src = 'img/gosling.jpg';
+      }
+
+      function showImg2() {
+        mainImg.src = img2.src;
+      }
+      function removeImg2() {
+        mainImg.src = 'img/gosling.jpg';
+      }
+
+      function showImg3() {
+        mainImg.src = img3.src;
+      }
+      function removeImg3() {
+        mainImg.src = 'img/gosling.jpg';
+      }
+
+      function showImg4() {
+        mainImg.src = img4.src;
+      }
+      function removeImg4() {
+        mainImg.src = 'img/gosling.jpg';
+      }
+    </script>
+  </body>
+</html>
