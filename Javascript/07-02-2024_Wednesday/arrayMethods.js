@@ -44,11 +44,7 @@
 // Butter chicken
 
 const createArr = function (length) {
-  let arr = [];
-  for (let i = 0; i < length; i++) {
-    arr.push(i + 1);
-  }
-  return arr;
+  return Array.from({ length: length }, (_, i) => i + 1);
 };
 
 ////////////START OF 1
