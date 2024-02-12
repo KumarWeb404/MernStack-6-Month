@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Reciept</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="table__container">
+      <table class="table__content">
+        <thead>
+          <tr>
+            <th>Admin</th>
+            <th>Checkout</th>
+            <th>Reciept</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table__content--admin">
+              <div class="table__content--admin-product">
+                <p>Add a new Product</p>
+                <input
+                  class="table__content--input"
+                  id="product-input"
+                  type="text"
+                  placeholder="Product Name"
+                />
+                <button class="table__content--button" id="add-product">
+                  Add a product
+                </button>
+              </div>
+              <div class="table__content--admin-price">
+                <p>Select a product then add the price per unit</p>
+                <select
+                  class="table__content--dropdown"
+                  id="admin-dropdown"
+                ></select>
+                <input
+                  class="table__content--input table__content--input-number"
+                  id="price-input"
+                  type="number"
+                  min="0"
+                  placeholder="Price"
+                />
+              </div>
+              <div class="table__content--admin-button">
+                <button class="table__content--button" id="add-price">
+                  Add Price
+                </button>
+              </div>
+              <span id="admin-message"></span>
+            </td>
+            <td class="table__content--checkout">
+              <div class="table__content--checkout-new-transaction">
+                <button class="table__content--button" id="new-transaction">
+                  New Transaction
+                </button>
+              </div>
+              <div class="table__content--checkout-units">
+                <p>Select a product and then add the total unit.</p>
+                <select
+                  class="table__content--dropdown"
+                  id="checkout-dropdown"
+                ></select>
+                <label>Unit:</label>
+                <input
+                  class="table__content--input table__content--input-number"
+                  id="unit-input"
+                  type="number"
+                  min="0"
+                />
+              </div>
+              <div class="table__content--admin-button">
+                <button class="table__content--button" id="add-cart">
+                  Add to cart
+                </button>
+              </div>
+              <div class="table__content--checkout-numbers-container">
+                <div class="table__content--checkout-numbers">
+                  <button class="table__content--number-button" value="1">
+                    1</button
+                  ><button class="table__content--number-button" value="2">
+                    2
+                  </button>
+                </div>
+                <div class="table__content--checkout-numbers">
+                  <button class="table__content--number-button" value="3">
+                    3</button
+                  ><button class="table__content--number-button" value="4">
+                    4
+                  </button>
+                </div>
+                <div class="table__content--checkout-numbers">
+                  <button class="table__content--number-button" value="5">
+                    5</button
+                  ><button class="table__content--number-button" value="6">
+                    6
+                  </button>
+                </div>
+
+                <div class="table__content--checkout-numbers">
+                  <button class="table__content--number-button" value="7">
+                    7</button
+                  ><button class="table__content--number-button" value="8">
+                    8
+                  </button>
+                </div>
+                <div class="table__content--checkout-numbers">
+                  <button class="table__content--number-button" value="9">
+                    9
+                  </button>
+                </div>
+              </div>
+              <button class="table__content--button" id="pay">Pay</button>
+              <span id="checkout-message"></span>
+            </td>
+            <td class="table__content--receipt" id="receipt">
+              <div>
+                <p>Date <span id="showDate"></span></p>
+                <p>Time <span id="showTime"></span></p>
+                <table border="2px">
+                  <thead>
+                    <tr>
+                      <td>Product</td>
+                      <td>$/unit</td>
+                      <td>Unit(s)</td>
+                      <td>Price</td>
+                    </tr>
+                  </thead>
+                  <tbody id="receipt-body"></tbody>
+                </table>
+                <p>Total Price: <span id="total-price"></span></p>
+                <p>taxes: <span id="tax"></span></p>
+                <p>Amount Due: <span id="amount"></span></p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

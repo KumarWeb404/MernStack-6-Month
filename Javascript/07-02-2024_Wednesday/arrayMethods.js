@@ -118,12 +118,3 @@ const {
 
 console.log(rice, milk, honey, spinach, peas, chickenK, chickenB);
 ////////////END OF 4
-for (let value in food) {
-  // for (let subValue of Object.keys(value)) {
-  //   console.log(subValue);
-  // }
-  console.log(value);
-  for (let subValue in value) {
-    console.log(subValue);
-  }
-}

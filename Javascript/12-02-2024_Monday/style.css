@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.table__container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.table__content {
+  width: 100%;
+}
+
+/* .table__content--admin,
+.table__content--checkout {
+  padding: 20px;
+} */
+
+.table__content--admin {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.table__content--admin-product {
+  margin: 50px 0;
+}
+.table__content--admin-product p {
+  margin-bottom: 10px;
+}
+
+.table__content--admin-price p {
+  margin-bottom: 10px;
+}
+.table__content--admin-button {
+  margin-top: 10px;
+}
+
+.table__content--dropdown {
+  width: 150px;
+  height: 40px;
+}
+.table__content--input {
+  height: 40px;
+}
+.table__content--input-number {
+  width: 80px;
+}
+.table__content--button,
+.table__content--button:hover {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00adb5;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.table__content--checkout-new-transaction {
+  margin: 30px 0;
+}
+.table__content--checkout .table__content--checkout-numbers-container {
+  margin-top: 20px;
+}
+.table__content--checkout-numbers {
+  margin-bottom: 10px;
+}
+
+.table__content--number-button {
+  margin-left: 5px;
+  width: 100px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.table__content--receipt {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  visibility: hidden;
+}
+.table__content--receipt div p,
+.table__content--receipt div table {
+  margin-bottom: 10px;
+}
+.table__content--receipt div table {
+  width: 100%;
+}
