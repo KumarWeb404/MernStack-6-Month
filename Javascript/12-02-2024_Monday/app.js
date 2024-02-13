@@ -101,7 +101,7 @@ const showReceipt = () => {
 };
 
 const messageTimeout = () => {
-  setTimeout(() => (adminMessage.textContent = ''), 4000);
+  setTimeout(() => (adminMessage.textContent = ''), 2000);
 };
 
 const sendMessage = (str) => {
