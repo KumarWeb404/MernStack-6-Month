@@ -2,25 +2,40 @@
 
 //functions
 const pushProduct = () => {
-  if (!productData.find((el) => el.productName == inputProduct.value)) {
-    productData.push({ productName: inputProduct.value });
-    adminDropdown.innerHTML += `<option>${inputProduct.value}</option>`;
-    sendMessage(`Item ${inputProduct.value} added to products`);
+  if (inputProduct.value) {
+    if (productData.find((el) => el.productName == inputProduct.value)) {
+      sendMessage(`Product - ${inputProduct.value} already exists.`);
+    } else {
+      productData.push({ productName: inputProduct.value });
+      adminDropdown.innerHTML += `<option>${inputProduct.value}</option>`;
+      sendMessage(`Product - ${inputProduct.value} added in list.`);
+    }
   } else {
-    sendMessage(`Item ${inputProduct.value} already exists.`);
+    sendMessage('Invalid Product.');
   }
+
+  inputProduct.value = '';
 
   messageTimeout();
 };
 
 const pushPrice = () => {
   const currIndex = getIndex(adminDropdown.value);
-  if (!productData[currIndex].productPrice) {
-    sendMessage(`Item price of ${adminDropdown.value} added`);
+  if (inputPrice.value) {
+    if (!productData[currIndex].productPrice) {
+      sendMessage(
+        `Successfully set ${adminDropdown.value} price to ${inputPrice.value}`
+      );
+    } else {
+      sendMessage(
+        `Successfully updated ${adminDropdown.value} price to ${inputPrice.value}`
+      );
+    }
+    productData[currIndex].productPrice = +inputPrice.value;
   } else {
-    sendMessage(`Item price of ${adminDropdown.value} updated`);
+    sendMessage('Invalid Price');
   }
-  productData[currIndex].productPrice = +inputPrice.value;
+
   messageTimeout();
 };
 
@@ -48,12 +63,14 @@ const pushUnit = () => {
       productData[currIndex].productPrice * +inputUnit.value;
     alert('Added to cart');
   } else {
-    alert('Please select valid product.');
+    alert('Invalid product/unit');
   }
 };
 
 const showReceipt = () => {
-  if (!productData.find((el) => el.totalUnit)) return;
+  if (!productData.every((el) => el.totalUnit)) {
+    return alert('Please enter unit for all products');
+  }
   const storeDate = new Date();
   const date = storeDate.getDate();
   const month = storeDate.getMonth();
@@ -133,5 +150,8 @@ numberButtons.forEach((el) =>
     inputUnit.value = +e.target.value;
   })
 );
+inputUnit.addEventListener('input', (e) => {
+  e.target.value = '';
+});
 addToCartButton.addEventListener('click', pushUnit);
 payButton.addEventListener('click', showReceipt);

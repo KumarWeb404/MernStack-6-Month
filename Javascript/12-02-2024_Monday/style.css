@@ -10,22 +10,21 @@ body {
   font-family: 'Kanit', sans-serif;
 }
 
+thead {
+  background-color: #ec625f;
+}
+
 .table__container {
-  width: 95%;
   display: flex;
   justify-content: center;
   margin: auto;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #313131;
 }
 .table__content {
   width: 100%;
+  color: white;
 }
-
-/* .table__content--admin,
-.table__content--checkout {
-  padding: 20px;
-} */
 
 .table__content--admin {
   display: flex;
@@ -46,6 +45,11 @@ body {
   margin-top: 10px;
 }
 
+.admin-message,
+.checkout-message {
+  color: #ec625f;
+  margin: 20px 0;
+}
 .table__content--dropdown {
   width: 150px;
   height: 40px;
@@ -61,7 +65,7 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #00adb5;
+  background-color: #ec625f;
   color: white;
   font-family: inherit;
   cursor: pointer;
@@ -83,8 +87,9 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: grey;
+  background-color: white;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .table__content--receipt {
@@ -93,6 +98,7 @@ body {
   text-align: left;
   background-color: white;
   visibility: hidden;
+  color: black;
 }
 .table__content--receipt div p,
 .table__content--receipt div table {
