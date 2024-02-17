@@ -1,4 +1,4 @@
-const students = [
+module.exports = [
   {
     id: 1,
     name: 'Rahul',
@@ -40,5 +40,3 @@ const students = [
     course: 'MEAN',
   },
 ];
-
-module.exports = students;
