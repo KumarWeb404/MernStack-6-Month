@@ -1,6 +1,7 @@
 const express = require('express');
 const productList = require('./modules/porductList');
 const filterProduct = require('./modules/filterProduct');
+const port = 5000;
 const app = express();
 
 app.get('/', (req, res) => res.send(productList));
@@ -20,7 +21,6 @@ app.get('/get_product_price/:price', (req, res) => {
   res.send(output);
 });
 
-const port = 5000;
 app.listen(port, () => {
-  console.log('RUNNING');
+  console.log(`The Server is running on port ${port}...`);
 });
