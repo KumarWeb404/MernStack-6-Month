@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const userSchema = mongoose.Schema({
   autoId: { type: Number, default: 0 },
   name: { type: String, default: '' },
